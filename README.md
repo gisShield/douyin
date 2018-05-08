@@ -9,6 +9,7 @@
  - python3.6.1
  - scrapy1.5.0
  - mongoDB
+ - APScheduler
 
 ### 项目介绍
 
