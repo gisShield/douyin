@@ -4,22 +4,13 @@
 #
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-import pymongo
-import json
-from scrapy.conf import settings
-from douyin.items import DouyinCategoryItem
-from douyin.utils.tools import MyTools
 from douyin.utils.tools import DBTools
 # 分类信息保存
 
 
 class DouyinPipeline(object):
     def __init__(self):
-        '''host = settings['MONGODB_HOST']  # settings 赋值piplines
-        port = settings['MONGODB_PORT']
-        dbName = settings['MONGODB_DBNAME']  # 数据库名字
-        client = pymongo.MongoClient(host=host, port=port)  # 链接数据库
-        tdb = client[dbName]'''
+
         db_con_video = DBTools('video')
         db_con_category = DBTools('category')
         self.post_video = db_con_video.get_db_con()

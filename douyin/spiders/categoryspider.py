@@ -4,8 +4,10 @@
     爬取列表信息
 '''
 import json
-from scrapy.spiders import CrawlSpider
+
 from scrapy.http import Request
+from scrapy.spiders import CrawlSpider
+
 from douyin.items import DouyinCategoryItem
 
 

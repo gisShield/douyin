@@ -2,11 +2,13 @@
 # -*- coding:utf-8 -*-
 
 import json
-from scrapy.spiders import CrawlSpider
-from scrapy.http import Request
+
 from douyin.items import DouyinItem
-from douyin.utils.tools import MyTools
+from scrapy.http import Request
+from scrapy.spiders import CrawlSpider
+
 from douyin.utils.tools import DBTools
+from douyin.utils.tools import MyTools
 
 
 class douyinSpider(CrawlSpider):
