@@ -35,11 +35,6 @@ class categorySpider(CrawlSpider):
                 for jsonobj in aweme_list:
                     item = self.init_item(jsonobj)
                     yield item
-        else:
-
-            nexturl = self.url + str(self.cursor_num)
-
-            yield Request(nexturl, callback=self.parse)
 
     def init_item(self, jsonobj):
         item = DouyinCategoryItem()

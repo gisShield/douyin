@@ -11,6 +11,8 @@ class DouyinItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
 
+    # 挑战唯一标识
+    category_id = scrapy.Field()
     # 用户信息
     # 用户id
     user_uid = scrapy.Field()

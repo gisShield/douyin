@@ -36,10 +36,10 @@ if __name__ == '__main__':
         '======================程序启动！The time is: %s =======================' %
         datetime.now())
     scheduler = BackgroundScheduler()
-    scheduler.add_job(tick_list, 'cron', day='*', hour=0, minute=0)  # 每天凌晨执行
+    scheduler.add_job(tick_list, 'cron', day='*', hour=0, minute=30)  # 每天凌晨更新
 
-    scheduler.add_job(tick_challenge, 'cron', day='*', hour=1, minute=0)
-    scheduler.add_job(tick_music, 'cron', day='*', hour=1, minute=30)
+    scheduler.add_job(tick_challenge, 'cron', day='*', hour=2, minute=0)
+    scheduler.add_job(tick_music, 'cron', day='*', hour=3, minute=0)
     scheduler.start()  # 这里的调度任务是独立的一个线程
     print('Press Ctrl+{0} to exit'.format('Break' if os.name == 'nt' else 'C'))
 
